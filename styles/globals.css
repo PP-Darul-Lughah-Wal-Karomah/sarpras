@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* width */
+::-webkit-scrollbar {
+  @apply w-1;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  @apply rounded-xl shadow-indigo-600 shadow-inner;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  @apply bg-indigo-300 rounded-xl;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-indigo-500;
+}
