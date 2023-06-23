@@ -9,11 +9,11 @@ type AppLayoutProps = {
 const AppLayout = ({ children }: AppLayoutProps) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="flex overflow-hidden h-screen bg-slate-300">
+    <div className="flex h-screen overflow-hidden bg-slate-300">
       <Sidebar isOpen={isOpen} closeSidebar={() => setIsOpen(false)} />
-      <div className="relative overflow-y-auto flex-1 scroll-bar">
+      <div className="scroll-bar relative flex-1 overflow-y-auto">
         <Navbar toggleSidebar={() => setIsOpen(!isOpen)} />
-        <main className="px-4 mt-8 mb-4">{children}</main>
+        <main className="mb-4 mt-8 px-4">{children}</main>
       </div>
     </div>
   );

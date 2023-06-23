@@ -1,3 +1,4 @@
+import ProtectedRoute from "@/components/ProtectedRoute";
 import AppLayout from "@/templates/Admin/AppLayout";
 import { NextPage } from "next";
 import Image from "next/image";
@@ -12,7 +13,7 @@ const IndexTablesPage: NextPage = () => {
         <p className="mt-1 text-sm text-gray-500 dark:text-gray-300">
           These companies have purchased in the last 12 months.
         </p>
-        <div className="flex flex-col mt-6">
+        <div className="mt-6 flex flex-col">
           <div className="-my-2 overflow-x-auto">
             <div className="inline-block min-w-full py-2 align-middle">
               <div className="overflow-hidden border border-gray-200 dark:border-gray-700 md:rounded-lg">
@@ -21,7 +22,7 @@ const IndexTablesPage: NextPage = () => {
                     <tr>
                       <th
                         scope="col"
-                        className="py-3.5 px-4 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400"
+                        className="px-4 py-3.5 text-left text-sm font-normal text-gray-500 rtl:text-right dark:text-gray-400"
                       >
                         <button className="flex items-center gap-x-3 focus:outline-none">
                           <span>Company</span>
@@ -54,36 +55,36 @@ const IndexTablesPage: NextPage = () => {
                       </th>
                       <th
                         scope="col"
-                        className="px-12 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400"
+                        className="px-12 py-3.5 text-left text-sm font-normal text-gray-500 rtl:text-right dark:text-gray-400"
                       >
                         Status
                       </th>
                       <th
                         scope="col"
-                        className="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400"
+                        className="px-4 py-3.5 text-left text-sm font-normal text-gray-500 rtl:text-right dark:text-gray-400"
                       >
                         About
                       </th>
                       <th
                         scope="col"
-                        className="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400"
+                        className="px-4 py-3.5 text-left text-sm font-normal text-gray-500 rtl:text-right dark:text-gray-400"
                       >
                         Users
                       </th>
                       <th
                         scope="col"
-                        className="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400"
+                        className="px-4 py-3.5 text-left text-sm font-normal text-gray-500 rtl:text-right dark:text-gray-400"
                       >
                         License use
                       </th>
-                      <th scope="col" className="relative py-3.5 px-4">
+                      <th scope="col" className="relative px-4 py-3.5">
                         <span className="sr-only">Edit</span>
                       </th>
                     </tr>
                   </thead>
-                  <tbody className="bg-white divide-y divide-gray-200 dark:divide-gray-700 dark:bg-gray-900">
+                  <tbody className="divide-y divide-gray-200 bg-white dark:divide-gray-700 dark:bg-gray-900">
                     <tr>
-                      <td className="px-4 py-4 text-sm font-medium whitespace-nowrap">
+                      <td className="whitespace-nowrap px-4 py-4 text-sm font-medium">
                         <div>
                           <h2 className="font-medium text-gray-800 dark:text-white ">
                             Catalog
@@ -93,12 +94,12 @@ const IndexTablesPage: NextPage = () => {
                           </p>
                         </div>
                       </td>
-                      <td className="px-12 py-4 text-sm font-medium whitespace-nowrap">
-                        <div className="inline px-3 py-1 text-sm font-normal rounded-full text-emerald-500 gap-x-2 bg-emerald-100/60 dark:bg-gray-800">
+                      <td className="whitespace-nowrap px-12 py-4 text-sm font-medium">
+                        <div className="inline gap-x-2 rounded-full bg-emerald-100/60 px-3 py-1 text-sm font-normal text-emerald-500 dark:bg-gray-800">
                           Customer
                         </div>
                       </td>
-                      <td className="px-4 py-4 text-sm whitespace-nowrap">
+                      <td className="whitespace-nowrap px-4 py-4 text-sm">
                         <div>
                           <h4 className="text-gray-700 dark:text-gray-200">
                             Content curating app
@@ -108,55 +109,55 @@ const IndexTablesPage: NextPage = () => {
                           </p>
                         </div>
                       </td>
-                      <td className="px-4 py-4 text-sm whitespace-nowrap">
+                      <td className="whitespace-nowrap px-4 py-4 text-sm">
                         <div className="flex items-center">
                           <Image
-                            className="object-cover w-6 h-6 -mx-1 border-2 border-white rounded-full dark:border-gray-700 shrink-0"
+                            className="-mx-1 h-6 w-6 shrink-0 rounded-full border-2 border-white object-cover dark:border-gray-700"
                             src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80"
                             alt=""
                             width={24}
                             height={24}
                           />
                           <Image
-                            className="object-cover w-6 h-6 -mx-1 border-2 border-white rounded-full dark:border-gray-700 shrink-0"
+                            className="-mx-1 h-6 w-6 shrink-0 rounded-full border-2 border-white object-cover dark:border-gray-700"
                             src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80"
                             alt=""
                             width={24}
                             height={24}
                           />
                           <Image
-                            className="object-cover w-6 h-6 -mx-1 border-2 border-white rounded-full dark:border-gray-700 shrink-0"
+                            className="-mx-1 h-6 w-6 shrink-0 rounded-full border-2 border-white object-cover dark:border-gray-700"
                             src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1256&q=80"
                             alt=""
                             width={24}
                             height={24}
                           />
                           <Image
-                            className="object-cover w-6 h-6 -mx-1 border-2 border-white rounded-full dark:border-gray-700 shrink-0"
+                            className="-mx-1 h-6 w-6 shrink-0 rounded-full border-2 border-white object-cover dark:border-gray-700"
                             src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80"
                             alt=""
                             width={24}
                             height={24}
                           />
-                          <p className="flex items-center justify-center w-6 h-6 -mx-1 text-xs text-blue-600 bg-blue-100 border-2 border-white rounded-full">
+                          <p className="-mx-1 flex h-6 w-6 items-center justify-center rounded-full border-2 border-white bg-blue-100 text-xs text-blue-600">
                             +4
                           </p>
                         </div>
                       </td>
-                      <td className="px-4 py-4 text-sm whitespace-nowrap">
-                        <div className="w-48 h-1.5 bg-blue-200 overflow-hidden rounded-full">
-                          <div className="bg-blue-500 w-2/3 h-1.5" />
+                      <td className="whitespace-nowrap px-4 py-4 text-sm">
+                        <div className="h-1.5 w-48 overflow-hidden rounded-full bg-blue-200">
+                          <div className="h-1.5 w-2/3 bg-blue-500" />
                         </div>
                       </td>
-                      <td className="px-4 py-4 text-sm whitespace-nowrap">
-                        <button className="px-1 py-1 text-gray-500 transition-colors duration-200 rounded-lg dark:text-gray-300 hover:bg-gray-100">
+                      <td className="whitespace-nowrap px-4 py-4 text-sm">
+                        <button className="rounded-lg px-1 py-1 text-gray-500 transition-colors duration-200 hover:bg-gray-100 dark:text-gray-300">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             fill="none"
                             viewBox="0 0 24 24"
                             strokeWidth="1.5"
                             stroke="currentColor"
-                            className="w-6 h-6"
+                            className="h-6 w-6"
                           >
                             <path
                               strokeLinecap="round"
@@ -168,7 +169,7 @@ const IndexTablesPage: NextPage = () => {
                       </td>
                     </tr>
                     <tr>
-                      <td className="px-4 py-4 text-sm font-medium whitespace-nowrap">
+                      <td className="whitespace-nowrap px-4 py-4 text-sm font-medium">
                         <div>
                           <h2 className="font-medium text-gray-800 dark:text-white ">
                             Circooles
@@ -178,12 +179,12 @@ const IndexTablesPage: NextPage = () => {
                           </p>
                         </div>
                       </td>
-                      <td className="px-12 py-4 text-sm font-medium whitespace-nowrap">
-                        <div className="inline px-3 py-1 text-sm font-normal text-gray-500 bg-gray-100 rounded-full dark:text-gray-400 gap-x-2 dark:bg-gray-800">
+                      <td className="whitespace-nowrap px-12 py-4 text-sm font-medium">
+                        <div className="inline gap-x-2 rounded-full bg-gray-100 px-3 py-1 text-sm font-normal text-gray-500 dark:bg-gray-800 dark:text-gray-400">
                           Churned
                         </div>
                       </td>
-                      <td className="px-4 py-4 text-sm whitespace-nowrap">
+                      <td className="whitespace-nowrap px-4 py-4 text-sm">
                         <div>
                           <h4 className="text-gray-700 dark:text-gray-200">
                             Design software
@@ -193,55 +194,55 @@ const IndexTablesPage: NextPage = () => {
                           </p>
                         </div>
                       </td>
-                      <td className="px-4 py-4 text-sm whitespace-nowrap">
+                      <td className="whitespace-nowrap px-4 py-4 text-sm">
                         <div className="flex items-center">
                           <Image
-                            className="object-cover w-6 h-6 -mx-1 border-2 border-white rounded-full dark:border-gray-700 shrink-0"
+                            className="-mx-1 h-6 w-6 shrink-0 rounded-full border-2 border-white object-cover dark:border-gray-700"
                             src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80"
                             alt=""
                             width={24}
                             height={24}
                           />
                           <Image
-                            className="object-cover w-6 h-6 -mx-1 border-2 border-white rounded-full dark:border-gray-700 shrink-0"
+                            className="-mx-1 h-6 w-6 shrink-0 rounded-full border-2 border-white object-cover dark:border-gray-700"
                             src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80"
                             alt=""
                             width={24}
                             height={24}
                           />
                           <Image
-                            className="object-cover w-6 h-6 -mx-1 border-2 border-white rounded-full dark:border-gray-700 shrink-0"
+                            className="-mx-1 h-6 w-6 shrink-0 rounded-full border-2 border-white object-cover dark:border-gray-700"
                             src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1256&q=80"
                             alt=""
                             width={24}
                             height={24}
                           />
                           <Image
-                            className="object-cover w-6 h-6 -mx-1 border-2 border-white rounded-full dark:border-gray-700 shrink-0"
+                            className="-mx-1 h-6 w-6 shrink-0 rounded-full border-2 border-white object-cover dark:border-gray-700"
                             src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80"
                             alt=""
                             width={24}
                             height={24}
                           />
-                          <p className="flex items-center justify-center w-6 h-6 -mx-1 text-xs text-blue-600 bg-blue-100 border-2 border-white rounded-full">
+                          <p className="-mx-1 flex h-6 w-6 items-center justify-center rounded-full border-2 border-white bg-blue-100 text-xs text-blue-600">
                             +4
                           </p>
                         </div>
                       </td>
-                      <td className="px-4 py-4 text-sm whitespace-nowrap">
-                        <div className="w-48 h-1.5 bg-blue-200 overflow-hidden rounded-full">
-                          <div className="bg-blue-500 w-2/5 h-1.5" />
+                      <td className="whitespace-nowrap px-4 py-4 text-sm">
+                        <div className="h-1.5 w-48 overflow-hidden rounded-full bg-blue-200">
+                          <div className="h-1.5 w-2/5 bg-blue-500" />
                         </div>
                       </td>
-                      <td className="px-4 py-4 text-sm whitespace-nowrap">
-                        <button className="px-1 py-1 text-gray-500 transition-colors duration-200 rounded-lg dark:text-gray-300 hover:bg-gray-100">
+                      <td className="whitespace-nowrap px-4 py-4 text-sm">
+                        <button className="rounded-lg px-1 py-1 text-gray-500 transition-colors duration-200 hover:bg-gray-100 dark:text-gray-300">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             fill="none"
                             viewBox="0 0 24 24"
                             strokeWidth="1.5"
                             stroke="currentColor"
-                            className="w-6 h-6"
+                            className="h-6 w-6"
                           >
                             <path
                               strokeLinecap="round"
@@ -253,7 +254,7 @@ const IndexTablesPage: NextPage = () => {
                       </td>
                     </tr>
                     <tr>
-                      <td className="px-4 py-4 text-sm font-medium whitespace-nowrap">
+                      <td className="whitespace-nowrap px-4 py-4 text-sm font-medium">
                         <div>
                           <h2 className="font-medium text-gray-800 dark:text-white ">
                             Sisyphus
@@ -263,12 +264,12 @@ const IndexTablesPage: NextPage = () => {
                           </p>
                         </div>
                       </td>
-                      <td className="px-12 py-4 text-sm font-medium whitespace-nowrap">
-                        <div className="inline px-3 py-1 text-sm font-normal rounded-full text-emerald-500 gap-x-2 bg-emerald-100/60 dark:bg-gray-800">
+                      <td className="whitespace-nowrap px-12 py-4 text-sm font-medium">
+                        <div className="inline gap-x-2 rounded-full bg-emerald-100/60 px-3 py-1 text-sm font-normal text-emerald-500 dark:bg-gray-800">
                           Customer
                         </div>
                       </td>
-                      <td className="px-4 py-4 text-sm whitespace-nowrap">
+                      <td className="whitespace-nowrap px-4 py-4 text-sm">
                         <div>
                           <h4 className="text-gray-700 dark:text-gray-200">
                             Automation and workflow
@@ -278,55 +279,55 @@ const IndexTablesPage: NextPage = () => {
                           </p>
                         </div>
                       </td>
-                      <td className="px-4 py-4 text-sm whitespace-nowrap">
+                      <td className="whitespace-nowrap px-4 py-4 text-sm">
                         <div className="flex items-center">
                           <Image
-                            className="object-cover w-6 h-6 -mx-1 border-2 border-white rounded-full dark:border-gray-700 shrink-0"
+                            className="-mx-1 h-6 w-6 shrink-0 rounded-full border-2 border-white object-cover dark:border-gray-700"
                             src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80"
                             alt=""
                             width={24}
                             height={24}
                           />
                           <Image
-                            className="object-cover w-6 h-6 -mx-1 border-2 border-white rounded-full dark:border-gray-700 shrink-0"
+                            className="-mx-1 h-6 w-6 shrink-0 rounded-full border-2 border-white object-cover dark:border-gray-700"
                             src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80"
                             alt=""
                             width={24}
                             height={24}
                           />
                           <Image
-                            className="object-cover w-6 h-6 -mx-1 border-2 border-white rounded-full dark:border-gray-700 shrink-0"
+                            className="-mx-1 h-6 w-6 shrink-0 rounded-full border-2 border-white object-cover dark:border-gray-700"
                             src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1256&q=80"
                             alt=""
                             width={24}
                             height={24}
                           />
                           <Image
-                            className="object-cover w-6 h-6 -mx-1 border-2 border-white rounded-full dark:border-gray-700 shrink-0"
+                            className="-mx-1 h-6 w-6 shrink-0 rounded-full border-2 border-white object-cover dark:border-gray-700"
                             src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80"
                             alt=""
                             width={24}
                             height={24}
                           />
-                          <p className="flex items-center justify-center w-6 h-6 -mx-1 text-xs text-blue-600 bg-blue-100 border-2 border-white rounded-full">
+                          <p className="-mx-1 flex h-6 w-6 items-center justify-center rounded-full border-2 border-white bg-blue-100 text-xs text-blue-600">
                             +4
                           </p>
                         </div>
                       </td>
-                      <td className="px-4 py-4 text-sm whitespace-nowrap">
-                        <div className="w-48 h-1.5 bg-blue-200 overflow-hidden rounded-full">
-                          <div className="bg-blue-500 w-11/12 h-1.5" />
+                      <td className="whitespace-nowrap px-4 py-4 text-sm">
+                        <div className="h-1.5 w-48 overflow-hidden rounded-full bg-blue-200">
+                          <div className="h-1.5 w-11/12 bg-blue-500" />
                         </div>
                       </td>
-                      <td className="px-4 py-4 text-sm whitespace-nowrap">
-                        <button className="px-1 py-1 text-gray-500 transition-colors duration-200 rounded-lg dark:text-gray-300 hover:bg-gray-100">
+                      <td className="whitespace-nowrap px-4 py-4 text-sm">
+                        <button className="rounded-lg px-1 py-1 text-gray-500 transition-colors duration-200 hover:bg-gray-100 dark:text-gray-300">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             fill="none"
                             viewBox="0 0 24 24"
                             strokeWidth="1.5"
                             stroke="currentColor"
-                            className="w-6 h-6"
+                            className="h-6 w-6"
                           >
                             <path
                               strokeLinecap="round"
@@ -338,7 +339,7 @@ const IndexTablesPage: NextPage = () => {
                       </td>
                     </tr>
                     <tr>
-                      <td className="px-4 py-4 text-sm font-medium whitespace-nowrap">
+                      <td className="whitespace-nowrap px-4 py-4 text-sm font-medium">
                         <div>
                           <h2 className="font-medium text-gray-800 dark:text-white ">
                             Hourglass
@@ -348,12 +349,12 @@ const IndexTablesPage: NextPage = () => {
                           </p>
                         </div>
                       </td>
-                      <td className="px-12 py-4 text-sm font-medium whitespace-nowrap">
-                        <div className="inline px-3 py-1 text-sm font-normal text-gray-500 bg-gray-100 rounded-full dark:text-gray-400 gap-x-2 dark:bg-gray-800">
+                      <td className="whitespace-nowrap px-12 py-4 text-sm font-medium">
+                        <div className="inline gap-x-2 rounded-full bg-gray-100 px-3 py-1 text-sm font-normal text-gray-500 dark:bg-gray-800 dark:text-gray-400">
                           Churned
                         </div>
                       </td>
-                      <td className="px-4 py-4 text-sm whitespace-nowrap">
+                      <td className="whitespace-nowrap px-4 py-4 text-sm">
                         <div>
                           <h4 className="text-gray-700 dark:text-gray-200">
                             Productivity app
@@ -363,55 +364,55 @@ const IndexTablesPage: NextPage = () => {
                           </p>
                         </div>
                       </td>
-                      <td className="px-4 py-4 text-sm whitespace-nowrap">
+                      <td className="whitespace-nowrap px-4 py-4 text-sm">
                         <div className="flex items-center">
                           <Image
-                            className="object-cover w-6 h-6 -mx-1 border-2 border-white rounded-full dark:border-gray-700 shrink-0"
+                            className="-mx-1 h-6 w-6 shrink-0 rounded-full border-2 border-white object-cover dark:border-gray-700"
                             src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80"
                             alt=""
                             width={24}
                             height={24}
                           />
                           <Image
-                            className="object-cover w-6 h-6 -mx-1 border-2 border-white rounded-full dark:border-gray-700 shrink-0"
+                            className="-mx-1 h-6 w-6 shrink-0 rounded-full border-2 border-white object-cover dark:border-gray-700"
                             src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80"
                             alt=""
                             width={24}
                             height={24}
                           />
                           <Image
-                            className="object-cover w-6 h-6 -mx-1 border-2 border-white rounded-full dark:border-gray-700 shrink-0"
+                            className="-mx-1 h-6 w-6 shrink-0 rounded-full border-2 border-white object-cover dark:border-gray-700"
                             src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1256&q=80"
                             alt=""
                             width={24}
                             height={24}
                           />
                           <Image
-                            className="object-cover w-6 h-6 -mx-1 border-2 border-white rounded-full dark:border-gray-700 shrink-0"
+                            className="-mx-1 h-6 w-6 shrink-0 rounded-full border-2 border-white object-cover dark:border-gray-700"
                             src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80"
                             alt=""
                             width={24}
                             height={24}
                           />
-                          <p className="flex items-center justify-center w-6 h-6 -mx-1 text-xs text-blue-600 bg-blue-100 border-2 border-white rounded-full">
+                          <p className="-mx-1 flex h-6 w-6 items-center justify-center rounded-full border-2 border-white bg-blue-100 text-xs text-blue-600">
                             +4
                           </p>
                         </div>
                       </td>
-                      <td className="px-4 py-4 text-sm whitespace-nowrap">
-                        <div className="w-48 h-1.5 bg-blue-200 overflow-hidden rounded-full">
-                          <div className="bg-blue-500 w-1/3 h-1.5" />
+                      <td className="whitespace-nowrap px-4 py-4 text-sm">
+                        <div className="h-1.5 w-48 overflow-hidden rounded-full bg-blue-200">
+                          <div className="h-1.5 w-1/3 bg-blue-500" />
                         </div>
                       </td>
-                      <td className="px-4 py-4 text-sm whitespace-nowrap">
-                        <button className="px-1 py-1 text-gray-500 transition-colors duration-200 rounded-lg dark:text-gray-300 hover:bg-gray-100">
+                      <td className="whitespace-nowrap px-4 py-4 text-sm">
+                        <button className="rounded-lg px-1 py-1 text-gray-500 transition-colors duration-200 hover:bg-gray-100 dark:text-gray-300">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             fill="none"
                             viewBox="0 0 24 24"
                             strokeWidth="1.5"
                             stroke="currentColor"
-                            className="w-6 h-6"
+                            className="h-6 w-6"
                           >
                             <path
                               strokeLinecap="round"
@@ -423,7 +424,7 @@ const IndexTablesPage: NextPage = () => {
                       </td>
                     </tr>
                     <tr>
-                      <td className="px-4 py-4 text-sm font-medium whitespace-nowrap">
+                      <td className="whitespace-nowrap px-4 py-4 text-sm font-medium">
                         <div>
                           <h2 className="font-medium text-gray-800 dark:text-white ">
                             Quotient
@@ -433,12 +434,12 @@ const IndexTablesPage: NextPage = () => {
                           </p>
                         </div>
                       </td>
-                      <td className="px-12 py-4 text-sm font-medium whitespace-nowrap">
-                        <div className="inline px-3 py-1 text-sm font-normal rounded-full text-emerald-500 gap-x-2 bg-emerald-100/60 dark:bg-gray-800">
+                      <td className="whitespace-nowrap px-12 py-4 text-sm font-medium">
+                        <div className="inline gap-x-2 rounded-full bg-emerald-100/60 px-3 py-1 text-sm font-normal text-emerald-500 dark:bg-gray-800">
                           Customer
                         </div>
                       </td>
-                      <td className="px-4 py-4 text-sm whitespace-nowrap">
+                      <td className="whitespace-nowrap px-4 py-4 text-sm">
                         <div>
                           <h4 className="text-gray-700 dark:text-gray-200">
                             Sales CRM
@@ -448,55 +449,55 @@ const IndexTablesPage: NextPage = () => {
                           </p>
                         </div>
                       </td>
-                      <td className="px-4 py-4 text-sm whitespace-nowrap">
+                      <td className="whitespace-nowrap px-4 py-4 text-sm">
                         <div className="flex items-center">
                           <Image
-                            className="object-cover w-6 h-6 -mx-1 border-2 border-white rounded-full dark:border-gray-700 shrink-0"
+                            className="-mx-1 h-6 w-6 shrink-0 rounded-full border-2 border-white object-cover dark:border-gray-700"
                             src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80"
                             alt=""
                             width={24}
                             height={24}
                           />
                           <Image
-                            className="object-cover w-6 h-6 -mx-1 border-2 border-white rounded-full dark:border-gray-700 shrink-0"
+                            className="-mx-1 h-6 w-6 shrink-0 rounded-full border-2 border-white object-cover dark:border-gray-700"
                             src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80"
                             alt=""
                             width={24}
                             height={24}
                           />
                           <Image
-                            className="object-cover w-6 h-6 -mx-1 border-2 border-white rounded-full dark:border-gray-700 shrink-0"
+                            className="-mx-1 h-6 w-6 shrink-0 rounded-full border-2 border-white object-cover dark:border-gray-700"
                             src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1256&q=80"
                             alt=""
                             width={24}
                             height={24}
                           />
                           <Image
-                            className="object-cover w-6 h-6 -mx-1 border-2 border-white rounded-full dark:border-gray-700 shrink-0"
+                            className="-mx-1 h-6 w-6 shrink-0 rounded-full border-2 border-white object-cover dark:border-gray-700"
                             src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80"
                             alt=""
                             width={24}
                             height={24}
                           />
-                          <p className="flex items-center justify-center w-6 h-6 -mx-1 text-xs text-blue-600 bg-blue-100 border-2 border-white rounded-full">
+                          <p className="-mx-1 flex h-6 w-6 items-center justify-center rounded-full border-2 border-white bg-blue-100 text-xs text-blue-600">
                             +4
                           </p>
                         </div>
                       </td>
-                      <td className="px-4 py-4 text-sm whitespace-nowrap">
-                        <div className="w-48 h-1.5 bg-blue-200 overflow-hidden rounded-full">
-                          <div className="bg-blue-500 w-1/6 h-1.5" />
+                      <td className="whitespace-nowrap px-4 py-4 text-sm">
+                        <div className="h-1.5 w-48 overflow-hidden rounded-full bg-blue-200">
+                          <div className="h-1.5 w-1/6 bg-blue-500" />
                         </div>
                       </td>
-                      <td className="px-4 py-4 text-sm whitespace-nowrap">
-                        <button className="px-1 py-1 text-gray-500 transition-colors duration-200 rounded-lg dark:text-gray-300 hover:bg-gray-100">
+                      <td className="whitespace-nowrap px-4 py-4 text-sm">
+                        <button className="rounded-lg px-1 py-1 text-gray-500 transition-colors duration-200 hover:bg-gray-100 dark:text-gray-300">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             fill="none"
                             viewBox="0 0 24 24"
                             strokeWidth="1.5"
                             stroke="currentColor"
-                            className="w-6 h-6"
+                            className="h-6 w-6"
                           >
                             <path
                               strokeLinecap="round"
@@ -513,10 +514,10 @@ const IndexTablesPage: NextPage = () => {
             </div>
           </div>
         </div>
-        <div className="flex items-center justify-between mt-6">
+        <div className="mt-6 flex items-center justify-between">
           <a
             href="#"
-            className="flex items-center px-5 py-2 text-sm text-gray-700 capitalize transition-colors duration-200 bg-white border rounded-md gap-x-2 hover:bg-gray-100 dark:bg-gray-900 dark:text-gray-200 dark:border-gray-700 dark:hover:bg-gray-800"
+            className="flex items-center gap-x-2 rounded-md border bg-white px-5 py-2 text-sm capitalize text-gray-700 transition-colors duration-200 hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-200 dark:hover:bg-gray-800"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -524,7 +525,7 @@ const IndexTablesPage: NextPage = () => {
               viewBox="0 0 24 24"
               strokeWidth="1.5"
               stroke="currentColor"
-              className="w-5 h-5 rtl:-scale-x-100"
+              className="h-5 w-5 rtl:-scale-x-100"
             >
               <path
                 strokeLinecap="round"
@@ -534,53 +535,53 @@ const IndexTablesPage: NextPage = () => {
             </svg>
             <span>previous</span>
           </a>
-          <div className="items-center hidden md:flex gap-x-3">
+          <div className="hidden items-center gap-x-3 md:flex">
             <a
               href="#"
-              className="px-2 py-1 text-sm text-blue-500 rounded-md dark:bg-gray-800 bg-blue-100/60"
+              className="rounded-md bg-blue-100/60 px-2 py-1 text-sm text-blue-500 dark:bg-gray-800"
             >
               1
             </a>
             <a
               href="#"
-              className="px-2 py-1 text-sm text-gray-500 rounded-md dark:hover:bg-gray-800 dark:text-gray-300 hover:bg-gray-100"
+              className="rounded-md px-2 py-1 text-sm text-gray-500 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800"
             >
               2
             </a>
             <a
               href="#"
-              className="px-2 py-1 text-sm text-gray-500 rounded-md dark:hover:bg-gray-800 dark:text-gray-300 hover:bg-gray-100"
+              className="rounded-md px-2 py-1 text-sm text-gray-500 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800"
             >
               3
             </a>
             <a
               href="#"
-              className="px-2 py-1 text-sm text-gray-500 rounded-md dark:hover:bg-gray-800 dark:text-gray-300 hover:bg-gray-100"
+              className="rounded-md px-2 py-1 text-sm text-gray-500 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800"
             >
               ...
             </a>
             <a
               href="#"
-              className="px-2 py-1 text-sm text-gray-500 rounded-md dark:hover:bg-gray-800 dark:text-gray-300 hover:bg-gray-100"
+              className="rounded-md px-2 py-1 text-sm text-gray-500 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800"
             >
               12
             </a>
             <a
               href="#"
-              className="px-2 py-1 text-sm text-gray-500 rounded-md dark:hover:bg-gray-800 dark:text-gray-300 hover:bg-gray-100"
+              className="rounded-md px-2 py-1 text-sm text-gray-500 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800"
             >
               13
             </a>
             <a
               href="#"
-              className="px-2 py-1 text-sm text-gray-500 rounded-md dark:hover:bg-gray-800 dark:text-gray-300 hover:bg-gray-100"
+              className="rounded-md px-2 py-1 text-sm text-gray-500 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800"
             >
               14
             </a>
           </div>
           <a
             href="#"
-            className="flex items-center px-5 py-2 text-sm text-gray-700 capitalize transition-colors duration-200 bg-white border rounded-md gap-x-2 hover:bg-gray-100 dark:bg-gray-900 dark:text-gray-200 dark:border-gray-700 dark:hover:bg-gray-800"
+            className="flex items-center gap-x-2 rounded-md border bg-white px-5 py-2 text-sm capitalize text-gray-700 transition-colors duration-200 hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-200 dark:hover:bg-gray-800"
           >
             <span>Next</span>
             <svg
@@ -589,7 +590,7 @@ const IndexTablesPage: NextPage = () => {
               viewBox="0 0 24 24"
               strokeWidth="1.5"
               stroke="currentColor"
-              className="w-5 h-5 rtl:-scale-x-100"
+              className="h-5 w-5 rtl:-scale-x-100"
             >
               <path
                 strokeLinecap="round"
@@ -604,4 +605,4 @@ const IndexTablesPage: NextPage = () => {
   );
 };
 
-export default IndexTablesPage;
+export default ProtectedRoute(IndexTablesPage);

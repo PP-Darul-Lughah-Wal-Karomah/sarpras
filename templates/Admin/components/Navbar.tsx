@@ -7,7 +7,7 @@ type NavbarProps = {
 
 const Navbar = ({ toggleSidebar }: NavbarProps) => {
   return (
-    <nav className="sticky top-4 mx-4 z-40 flex flex-row flex-wrap items-center justify-between rounded-xl bg-white/10 p-2 backdrop-blur-xl dark:bg-[#0b14374d]">
+    <nav className="sticky top-4 z-40 mx-4 flex flex-row flex-wrap items-center justify-between rounded-xl bg-white/10 p-2 backdrop-blur-xl dark:bg-[#0b14374d]">
       {/* <Breadcrumbs className="bg-transparent">
         <Link to="/" className="opacity-60">
           <svg
@@ -25,10 +25,10 @@ const Navbar = ({ toggleSidebar }: NavbarProps) => {
         <a href="#">Breadcrumbs</a>
       </Breadcrumbs> */}
 
-      <div className="flex justify-between w-full items-center">
+      <div className="flex w-full items-center justify-between">
         <button onClick={toggleSidebar}>
           <Image
-            className="w-auto h-6 sm:h-7"
+            className="h-6 w-auto sm:h-7"
             src="https://merakiui.com/images/full-logo.svg"
             alt=""
             width={200}
@@ -37,11 +37,11 @@ const Navbar = ({ toggleSidebar }: NavbarProps) => {
         </button>
         <div className="flex items-center">
           <button
-            className="hidden mx-4 text-gray-600 transition-colors duration-300 transform lg:block dark:text-gray-200 hover:text-gray-700 dark:hover:text-gray-400 focus:text-gray-700 dark:focus:text-gray-400 focus:outline-none"
+            className="mx-4 hidden transform text-gray-600 transition-colors duration-300 hover:text-gray-700 focus:text-gray-700 focus:outline-none dark:text-gray-200 dark:hover:text-gray-400 dark:focus:text-gray-400 lg:block"
             aria-label="show notifications"
           >
             <svg
-              className="w-6 h-6"
+              className="h-6 w-6"
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -60,10 +60,10 @@ const Navbar = ({ toggleSidebar }: NavbarProps) => {
             className="flex items-center focus:outline-none"
             aria-label="toggle profile dropdown"
           >
-            <div className="w-8 h-8 overflow-hidden border-2 border-gray-400 rounded-full">
+            <div className="h-8 w-8 overflow-hidden rounded-full border-2 border-gray-400">
               <Image
                 src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80"
-                className="object-cover w-full h-full"
+                className="h-full w-full object-cover"
                 alt="avatar"
                 width={32}
                 height={32}
