@@ -9,12 +9,12 @@
 
 /* Track */
 ::-webkit-scrollbar-track {
-  @apply rounded-xl shadow-indigo-600 shadow-inner;
+  @apply rounded-xl shadow-inner shadow-indigo-600;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  @apply bg-indigo-300 rounded-xl;
+  @apply rounded-xl bg-indigo-300;
 }
 
 /* Handle on hover */
